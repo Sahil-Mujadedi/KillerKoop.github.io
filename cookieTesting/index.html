@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie/localStorage Testing</title>
+</head>
+<body>
+    <style>
+        body {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #181818;
+            color: white;
+        }
+
+        #age {
+            font-size: large;
+        }
+    </style>
+
+    <h1>localStorage/cookie testing</h1>
+    
+    <input id="age" type="text" name="age" />
+    <h2>
+        <span id="output">Cookie(s) = </span>
+        <span>
+            <span id="ageDisplay"></span>
+        </span>
+    </h2>
+
+    <img src="img/cookie.png" alt="picture of cookies">
+    <!-- Place script at bottom of page so code runs after page has loaded  -->
+    <script>
+
+        // Function that will save the age into localStorage
+        function saveAge() {
+            // Turns input into a integer, then into string, to make finding "Nan" easier
+            if (parseInt(document.getElementById("age").value).toString() !== "NaN" || (parseInt(document.getElementByID("age").value) <= 0)) {
+                // Store age value that user inputted in age variable  
+                let age = document.getElementById("age").value;
+                
+                // Set the innerHTML of the ageDisplay element to what the user inputted
+                document.getElementById("ageDisplay").innerHTML = age;
+                document.getElementById("output").innerHTML = "Cookie(s) = ";
+                
+                // Save age variable into localStorage ageKey key
+                localStorage.setItem("ageKey", age);
+
+            } else {
+                document.getElementById("output").innerHTML = "Please enter a number greater than 0";
+                document.getElementById("ageDisplay").innerHTML = "";
+            }
+        }
+    
+        // We have to use innerHTML to set the inside of HTML elements using JavaScript
+        document.getElementById("ageDisplay").innerHTML = localStorage.getItem("ageKey");
+
+        // We have to use placeholder to update input elements using JavaScript
+        document.getElementById("age").placeholder = "Cookie(s)";
+
+        // Add listener to document that listens for keypress
+        // Run anonymous function that is defined in the same place
+        // Event is the argument that is defined by the event that just occurred
+        document.addEventListener("keypress", function(event) {
+            if(document.getElementById("age").value.length > 0) {
+                // If the event argument has its keycode variable equal to 13,
+                // user pressed enter so run saveAge function
+                if (event.keyCode == 13) {
+                    saveAge();
+                }   
+            }
+        });
+    
+    </script>    
+</body>
+</html>
