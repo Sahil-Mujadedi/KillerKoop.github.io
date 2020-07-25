@@ -2,7 +2,7 @@
 
 Website for all my projects.
 
-Projects: 
+Projects:<br>
 Typing Website
 <br>
 Guessing game
