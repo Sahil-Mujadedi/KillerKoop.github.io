@@ -50,12 +50,6 @@ nav {
 }
 
 /* Media Queries */
-@media (min-height: 715px) {
-    .my-button{
-        font-size: 3.5em;
-    }
-}
-
 @media (max-width: 1110px) {
     .typing-frame {
         width: 690px;

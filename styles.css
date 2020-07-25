@@ -2,14 +2,45 @@
     font-family: sans-serif;
     text-decoration: none;
 }
-body {
-    background-color: #1c1c1c;
-}
 
+.card {
+    position: relative;
+    margin: 5px 5px 5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding-right: 0PX;
+    display: inline-block;
+    text-align: center;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+img {
+    width: 400px;
+    border-radius: 10px 10px 0px 0px;
+}
+.container {
+    padding: 2px 16px;
+    color: #333;
+}
+.header {
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    color: #333;
+}
+#about {
+    border: 1px solid #333;
+    border-radius: 20px;
+    color: #222;
+    font-size: 1.5em;
+    transition: 0.3s;
+    padding: 2px;
+}
+#about:hover {
+    background-color: lightgrey;
+}
 nav {
-    color: white;
-}
-
-#typing {
-
+    text-align: center;
 }
