@@ -47,11 +47,15 @@ body {
     font-size: 2em;
     transition: 1s;
 }
-#hearts.shrink {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    font-size: 0.1em;
+
+#back {
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: #e3e3e3;
+}
+#back:hover {
+    background-color: grey;
 }

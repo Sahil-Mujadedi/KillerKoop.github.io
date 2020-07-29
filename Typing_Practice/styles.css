@@ -48,6 +48,17 @@ nav {
 #minute {
     text-align: center;
 }
+#back {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 4px;
+    border-radius: 10px;
+    display: inline;
+}
+#back:hover {
+    background-color: grey;
+}
 
 /* Media Queries */
 @media (max-width: 1110px) {

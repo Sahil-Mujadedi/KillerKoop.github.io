@@ -7,7 +7,7 @@
     position: relative;
     margin: 5px 5px 5px 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.4s;
     padding-right: 0PX;
     display: inline-block;
     text-align: center;
@@ -31,16 +31,19 @@ img {
     color: #333;
 }
 #about {
-    border: 1px solid #333;
-    border-radius: 20px;
-    color: #222;
-    font-size: 1.5em;
-    transition: 0.3s;
-    padding: 2px;
+    color: white;
+    margin-left: 10px;
 }
-#about:hover {
-    background-color: lightgrey;
-}
+
 nav {
     text-align: center;
+}
+footer {
+    position: fixed;
+    padding: 6px 0px 6px 0px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
 }
