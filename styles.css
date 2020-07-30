@@ -2,7 +2,9 @@
     font-family: sans-serif;
     text-decoration: none;
 }
-
+body {
+    background-color: #cccccc
+}
 .card {
     position: relative;
     margin: 5px 5px 5px 5px;
@@ -22,13 +24,16 @@ img {
 .container {
     padding: 2px 16px;
     color: #333;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
 }
 .header {
     text-align: center;
-    border: 1px solid #333;
+    border: 7px solid #333;
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
     color: #333;
+    background-color: white;
 }
 #about {
     color: white;
