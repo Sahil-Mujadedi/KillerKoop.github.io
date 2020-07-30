@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    font-family: 'Times New Roman';
+    background-color: #181818;
+    color: white;
+}
+#age {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+#back {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 4px;
+    border-radius: 10px;
+}
+#back:hover {
+    background-color: grey;
+}
