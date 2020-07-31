@@ -1,3 +1,6 @@
+* {
+    text-align: center!important;
+}
 p {
     font-family: sans-serif;
     font-size: 2em;
@@ -5,10 +8,10 @@ p {
 }
 
 #lives {
-    position: absolute;
+    position: fixed;
     top: 5px;
     right: 1px;
-    min-width: 250px;
+    width: 250px;
 }
 
 input:focus {
@@ -58,4 +61,30 @@ body {
 }
 #back:hover {
     background-color: grey;
+}
+@media screen and (max-width: 750px) {
+    input {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1em;
+    }
+    p {
+        font-size: 1em;
+    }
+    #lives {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 500px) {
+    input {
+        font-size: 0.75em;
+    }
+}
+@media screen and (max-width: 485px) {
+    #lives {
+        top: 100px;
+        margin-right: 20vw;
+        margin-left: 20vw;
+    }
 }
