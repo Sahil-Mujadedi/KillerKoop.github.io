@@ -38,6 +38,10 @@ img {
 #about {
     color: white;
     margin-left: 10px;
+    padding: 3px;
+}
+#about:hover {
+    background-color: #444;
 }
 
 nav {
