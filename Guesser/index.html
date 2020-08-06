@@ -3,19 +3,22 @@
 <head>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Guesser</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <a href="../index.html" style="position: relative;" id="back">&#8592;Back to Home Page</a>
-    <h2 id="lives">Lives<br> <span id="hearts"></span></h2>
+
+
+    <h2 id="lives">Lives<br><span id="hearts"></span></h2>
+
     <div class="game">
         <h1>Guess a number 1-100</h1>
-        <input type="number" id="userGuess" placeholder="Type here">
+        <input type="tel" maxlength="3" id="userGuess" placeholder="Type here">
         <p></p>
     </div>
-
+    
 
     <script src="script.js"></script>
 </body>
