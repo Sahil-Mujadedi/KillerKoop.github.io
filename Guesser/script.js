@@ -4,18 +4,31 @@ console.log("%c[ H e l l o ,  y o u  c h e a t e r . ]", "color: darkred;font-we
 let numberToGuess = Math.floor((Math.random() * 100) + 1);
 let promptUser = document.querySelector('p');
 let lives = 5;
+let userGuessBox = document.querySelector("#userGuess");
+let userGuess = userGuessBox.value;
+
+setInterval(function(){
+    userGuess = document.querySelector('#userGuess').value;
+
+    if(userGuess.length > 3) {
+        console.log('im a good boy');
+        userGuess = userGuess.substring(0, 3);
+        document.querySelector("#userGuess").value = userGuess;
+    }
+ }, 1);
+
+
+    
 
 // Populate hearts in the lives span tag once without requiring a keypress
 for(i = 0; i < lives; i++) {
     document.querySelector('#hearts').innerHTML += '&hearts;';
 }
-let userGuessBox = document.querySelector("#userGuess");
 
 document.addEventListener("keypress", function(event) {
     // Store user guess box in a variable and store the value of that 
     // in a different variable so we can reuse both later
-    
-    let userGuess = userGuessBox.value;
+    userGuess = document.querySelector("#userGuess").value;
 
     // Only run game logic if they press enter and they have typed something
     if(event.key === 'Enter' && userGuess.length > 0) {
@@ -34,10 +47,7 @@ document.addEventListener("keypress", function(event) {
             promptUser.innerHTML = 'You win!';
             userGuessBox.style.borderColor = "lime";
         }
-        else {
-            promptUser.innerHTML = 'Do not use letters or symbols.';
-            promptUser.style.color = "red";
-        }
+
         // Makes heart bigger when at one life
         if(lives < 2) {
             document.querySelector('#hearts').style.fontSize = '100px';
