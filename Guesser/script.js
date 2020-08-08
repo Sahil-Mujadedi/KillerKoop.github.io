@@ -7,18 +7,19 @@ let lives = 5;
 let userGuessBox = document.querySelector("#userGuess");
 let userGuess = userGuessBox.value;
 
+// Checking for more than three numbers
 setInterval(function(){
+    // Every millisecond update variable to always reflect actual value
     userGuess = document.querySelector('#userGuess').value;
-
+    
     if(userGuess.length > 3) {
-        console.log('im a good boy');
+        // Sets userGuess to 3 numbers if greater than 3
         userGuess = userGuess.substring(0, 3);
+
+        // Sets value of input box to userGuess
         document.querySelector("#userGuess").value = userGuess;
     }
  }, 1);
-
-
-    
 
 // Populate hearts in the lives span tag once without requiring a keypress
 for(i = 0; i < lives; i++) {
